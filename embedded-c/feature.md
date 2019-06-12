@@ -24,3 +24,12 @@ Given the LED driver is initialized
 When I turn on LED 01
 Then LED 01 should be on
 ```
+
+A single LED can be turned off.
+
+``` gherkin
+Given the LED driver is initialized
+And LED 01 is on
+When I turn off LED 01
+Then LED 01 should be off
+```
