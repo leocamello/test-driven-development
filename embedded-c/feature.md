@@ -13,6 +13,14 @@ Use LEDs to communicate status.
 All LEDs are off after the driver is initialized.
 
 ``` gherkin
-When the LED driver initializes
+When I initialize the LED driver
 Then all LEDs should be off
+```
+
+A single LED can be turned on.
+
+``` gherkin
+Given the LED driver is initialized
+When I turn on LED 01
+Then LED 01 should be on
 ```
