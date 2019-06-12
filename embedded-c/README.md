@@ -36,7 +36,7 @@ LED Driver Tests:
 
 ## Book
 
-| | | |
-|-----|-----|-----|
-| ![](https://github.com/leocamello/test-driven-development/raw/master/images/tdd_embeddedc.png "Test-Driven Development for Embedded C") | Test-Driven Development for Embedded C |  |
-|
+| | |
+|-----|-----|
+| ![](https://github.com/leocamello/test-driven-development/raw/master/images/tdd_embeddedc.png "Test-Driven Development for Embedded C") | Test-Driven Development for Embedded C |
+| | |
