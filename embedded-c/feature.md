@@ -43,3 +43,11 @@ And I turn on LED 08
 Then LED 09 should be on
 And LED 08 should be on
 ```
+
+Turn on all LEDs.
+
+``` gherkin
+Given the LED driver is initialized
+When I turn all LEDs on
+Then all LEDs should be on
+```

@@ -40,3 +40,9 @@ TEST(LedDriver, TurnOnMultipleLeds)
     LedDriver_TurnOn(8);
     TEST_ASSERT_EQUAL_HEX16(0x0180, virtualLeds);
 } 
+
+TEST(LedDriver, TurnAllLedsOn)
+{
+    LedDriver_TurnAllOn();
+    TEST_ASSERT_EQUAL_HEX16(0xFFFF, virtualLeds);
+} 
