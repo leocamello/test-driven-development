@@ -51,3 +51,14 @@ Given the LED driver is initialized
 When I turn all LEDs on
 Then all LEDs should be on
 ```
+
+Multiple LEDs can be turned on/off.
+
+``` gherkin
+Given the LED driver is initialized
+And all LEDs are on
+When I turn off LED 09
+And I turn off LED 08
+Then LED 09 should be off
+And LED 08 should be off
+```
