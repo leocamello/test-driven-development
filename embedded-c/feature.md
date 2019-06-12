@@ -33,3 +33,13 @@ And LED 01 is on
 When I turn off LED 01
 Then LED 01 should be off
 ```
+
+Multiple LEDs can be turned on/off.
+
+``` gherkin
+Given the LED driver is initialized
+When I turn on LED 09
+And I turn on LED 08
+Then LED 09 should be on
+And LED 08 should be on
+```
