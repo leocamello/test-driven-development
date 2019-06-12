@@ -1,5 +1,7 @@
 #include "leddriver.h"
 
+enum { ALL_LEDS_OFF = 0, ALL_LEDS_ON = ~ALL_LEDS_OFF };
+
 static uint16_t* ledsAddress;
 
 static int ConvertLedNumberToBit(int ledNumber)
@@ -10,7 +12,7 @@ static int ConvertLedNumberToBit(int ledNumber)
 void LedDriver_Initialize(uint16_t* address)
 {
     ledsAddress = address;
-    *ledsAddress = 0;
+    *ledsAddress = ALL_LEDS_OFF;
 }
 
 void LedDriver_TurnOn(int ledNumber)
@@ -25,5 +27,5 @@ void LedDriver_TurnOff(int ledNumber)
 
 void LedDriver_TurnAllOn(void)
 {
-    *ledsAddress = 0xFFFF;
+    *ledsAddress = ALL_LEDS_ON;
 } 
