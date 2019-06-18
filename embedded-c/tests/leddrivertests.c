@@ -68,3 +68,12 @@ TEST(LedDriver, UpperAndLowerBoundaries)
     LedDriver_TurnOn(16);
     TEST_ASSERT_EQUAL_HEX16(0x8001, virtualLeds);
 } 
+
+TEST(LedDriver, OutOfBoundsTurnOnDoesNoHarm)
+{
+    LedDriver_TurnOn(-1);
+    LedDriver_TurnOn(0);
+    LedDriver_TurnOn(17);
+    LedDriver_TurnOn(3141);
+    TEST_ASSERT_EQUAL_HEX16(0, virtualLeds);
+} 

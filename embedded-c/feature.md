@@ -83,3 +83,11 @@ And I turn on LED 16
 Then LED 01 should be on
 And LED 16 should be on
 ```
+
+Check out-of-bounds values.
+
+``` gherkin
+Given the LED driver is initialized
+When I turn on LEDs that are out-of-bounds
+Then it should do no harm
+```
