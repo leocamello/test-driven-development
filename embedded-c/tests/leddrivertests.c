@@ -61,3 +61,10 @@ TEST(LedDriver, LedMemoryIsNotReadable)
     LedDriver_TurnOn(8);
     TEST_ASSERT_EQUAL_HEX16(0x0080, virtualLeds);
 } 
+
+TEST(LedDriver, UpperAndLowerBoundaries)
+{
+    LedDriver_TurnOn(1);
+    LedDriver_TurnOn(16);
+    TEST_ASSERT_EQUAL_HEX16(0x8001, virtualLeds);
+} 

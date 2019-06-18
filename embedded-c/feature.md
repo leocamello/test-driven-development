@@ -73,3 +73,13 @@ And a value was assigned to the LED address
 When I turn on LED 08
 Then LED 08 should be on
 ```
+
+Check boundary values.
+
+``` gherkin
+Given the LED driver is initialized
+When I turn on LED 01
+And I turn on LED 16
+Then LED 01 should be on
+And LED 16 should be on
+```
