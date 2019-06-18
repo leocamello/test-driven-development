@@ -24,6 +24,9 @@ void LedDriver_Initialize(uint16_t* address)
 
 void LedDriver_TurnOn(int ledNumber)
 {
+    if (ledNumber <= 0 || ledNumber > 16)
+        return;    
+
     ledsImage |= ConvertLedNumberToBit(ledNumber);
     UpdateHardware();
 }
