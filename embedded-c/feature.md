@@ -91,3 +91,12 @@ Given the LED driver is initialized
 When I turn on LEDs that are out-of-bounds
 Then it should do no harm
 ```
+
+Check out-of-bounds values.
+
+``` gherkin
+Given the LED driver is initialized
+And I turn all LEDs on
+When I turn off LEDs that are out-of-bounds
+Then it should do no harm
+```
