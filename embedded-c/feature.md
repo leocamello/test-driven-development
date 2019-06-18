@@ -62,3 +62,14 @@ And I turn off LED 08
 Then LED 09 should be off
 And LED 08 should be off
 ```
+
+Can the software read the state of the LEDs?
+The LEDs I/O-mapped address is write-only.
+How do we prove the hardware is not read?
+
+``` gherkin
+Given the LED driver is initialized
+And a value was assigned to the LED address
+When I turn on LED 08
+Then LED 08 should be on
+```
