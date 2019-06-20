@@ -4,34 +4,30 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-I./include/",
-                "-I./unity/src/",
-                "-I./unity/extras/fixture/src/",
-                "./tests/main.c",
-                "./tests/testrunner.c",
-                "./tests/leddrivertests.c",
-                "./unity/src/unity.c",
-                "./unity/extras/fixture/src/unity_fixture.c",
-                "./src/leddriver.c",
-                "-o",
-                "./tests/leddrivertests.out"
-            ]
-        },
-        {
             "label": "run",
             "type": "shell",
-            "command": "./tests/leddrivertests.out",
+            "command": "./bin/leddrivertests.out",
             "dependsOn": [
                 "build"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make",
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "problemMatcher": []
         }
     ]
 }
